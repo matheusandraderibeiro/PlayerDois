@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Player Dois</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header class = "cabecalho">
+            <p class="cabecalho-perfil">Matheus Andrade</p>
+            <button class="cabecalho-botao"><span class="material-icons">notifications</span></button>
+        </header>
+
+        <nav class = "menuLateral">
+            <img src="fotos/logo_branca (2).png" alt="logotipo" class = "logoMenuLateral">
+
+            <ul class="conteudoMenuLateral">
+                <li class="itensMenuLateral">
+                    <span class="material-icons">shopping_bag</span>
+                    <a href="#" class="linkMenuLateral">loja</a>
+                </li>
+                <li class="itensMenuLateral">
+                    <span class="material-icons">space_dashboard</span>
+                    <a href="#" class="linkMenuLateral">biblioteca</a>
+                </li>
+                <li class="itensMenuLateral">
+                    <span class="material-icons">person</span>
+                    <a href="#" class="linkMenuLateral">perfil</a>
+                </li>
+                <li class="itensMenuLateral">
+                    <span class="material-icons">settings</span>
+                    <a href="#" class="linkMenuLateral">configurações</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class = "principal">
+            <h2 class = "tituloInicio">Início</h2>
+
+            <section class = "conteudoDestaque">
+                <div class = "caixaDestaque">
+                    <input type="radio" class="fotosDestaque" name = "slide" id = "slide1" checked>
+                    <input type="radio" class="fotosDestaque" name = "slide" id = "slide2">
+                    <input type="radio" class="fotosDestaque" name = "slide" id = "slide3">
+                    <input type="radio" class="fotosDestaque" name = "slide" id = "slide4">
+                
+                
+                    <div class="slide s1">
+                        <img src="fotos/banner-bioshock_infinite.jpg" alt="banner-bioshock_infinite" class="slideFoto">
+                    </div>
+                    <div class="slide">
+                        <img src="fotos/banner-godOfWar.jpg" alt="banner-godOfWar" class="slideFoto">
+                    </div>
+                    <div class="slide">
+                        <img src="fotos/banner-rayman.jpg" alt="banner-rayman" class="slideFoto">
+                    </div>
+                    <div class="slide">
+                        <img src="fotos/banner-deadCells.jpg" alt="banner-deadCells" class="slideFoto">
+                    </div>
+                    </div>
+                <div class="barraNavegacao">
+                    <label for="slide1" class="controlesNavegacao"></label>
+                    <label for="slide2" class="controlesNavegacao"></label>
+                    <label for="slide3" class="controlesNavegacao"></label>
+                    <label for="slide4" class="controlesNavegacao"></label>
+                </div>
+            </section>
+
+            <nav class = "pesquisar">
+                <form class="formulario">
+                    <input type="text" class = "campoBusca" placeholder = "pesquisar">
+                    <button class = "botaoPesquisa"><span class="material-icons">search</span></button>
+                </form>
+                
+                <div class = "blocoCategoria">
+                    <h3 class="titulistaJogos">Categorias</h3>
+
+                    <ul class="genero">
+                        <li class="estilojogo"><a href="#" class="itemJogo">Aventura</a></li>
+                        <li class="estilojogo"><a href="#" class="itemJogo">Ação</a></li>
+                        <li class="estilojogo"><a href="#" class="itemJogo">RPG</a></li>
+                        <li class="estilojogo"><a href="#" class="itemJogo">Corrida</a></li>
+                        <li class="estilojogo"><a href="#" class="itemJogo">Esporte</a></li>
+                        <li class="estilojogo"><a href="#" class="itemJogo">Estratégia</a></li>
+                    </ul>
+                </div> 
+            </nav>
+
+            <h2 class = "tituloJogos">Jogos</h2>
+
+            <section class = "produtos">
+                <article class="produtoItem">
+                    <div class = "caixaImg">
+                        <img src="fotos/call-of-duty.jpg" alt="call-of-duty" class="artJogo">
+                    </div>
+                    <div class="info">
+                        <p class="preco">R$50,00</p>
+                        <button class="comprar">comprar</button>
+                    </div>
+                </article>
+
+                <article class="produtoItem">
+                    <div class = "caixaImg">
+                        <img src="fotos/need-for-speed-capa.jpg" alt="need-for-speed" class="artJogo">
+                    </div>
+                    <div class="info">
+                        <p class="preco">R$70,00</p>
+                        <button class="comprar">comprar</button>
+                    </div>
+                </article>
+
+                <article class="produtoItem">
+                    <div class = "caixaImg">
+                        <img src="fotos/bioshock1-capa.jpg" alt="bioshock1" class="artJogo">
+                    </div>
+                    <div class="info">
+                        <p class="preco">R$60,00</p>
+                        <button class="comprar">comprar</button>
+                    </div>
+                </article>
+
+                <article class="produtoItem">
+                    <div class = "caixaImg">
+                        <img src="fotos/hollow-knigth_capa.jpg" alt="hollow-knigth" class="artJogo">
+                    </div>
+                    <div class="info">
+                        <p class="preco">R$40,00</p>
+                        <button class="comprar">comprar</button>
+                    </div>
+                </article>
+            </section>
+
+
+
+
+            <div class = "banner"></div>
+            <section class = "jogosGratis"></section>
+            <section class = "maisJogos"></section>
+        </main>
+
+        
+    </body>
+</html>
+
+<!--    
+    <footer class = "rodaPe">
+        <img src="fotos/logo_branca (2).png" alt="logotipo" class = "logoMenuLateral">
+        <p class = "copyright">&copy; copyright Player Dois - 2023</p>
+    </footer>
+-->

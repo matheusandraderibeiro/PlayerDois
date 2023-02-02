@@ -1,0 +1,384 @@
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-areas:
+        "menuLateral cabecalho"
+        "menuLateral principal"
+        "rodaPe rodaPe"
+    ;
+    font-family: "Open Sans",'icones', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #1d232a;
+    color: #ffffff;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    grid-column: 2 / span 3;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    padding:  8px 16px;
+    background-color: #1d232a;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.16);
+}
+
+.cabecalho-perfil {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 8px;
+    align-items: center;
+    justify-self: flex-end;
+
+    padding: 8px 32px;
+    font-size: 20px;
+    border-right: 1px solid #95999c;
+    color: #95999c;
+}
+    .cabecalho-perfil::before {
+        display: block;
+        content: "";
+        width: 32px;
+        height: 32px;
+        border-radius: 15px;
+        margin-right: 8px;
+        background-image: url("../fotos/foto-perfil.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+.cabecalho-botao {
+    margin: 10px 25px 10px 26px;
+    border: none;
+    background-color: #1d232a;;
+    
+}
+
+.material-icons {
+    color: #95999c;
+    font-size: 24px;
+}
+
+
+
+.menuLateral {
+    grid-area: menuLateral;
+    grid-column: 1;
+    grid-row: 1 /span 4;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+    width: 230px;
+    height: 100vh;
+    background-color: #15191c;
+}
+
+.logoMenuLateral {
+    align-self: center;
+    width: 120px;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.conteudoMenuLateral {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 16px 0 0 16px;
+}
+
+.itensMenuLateral {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.linkMenuLateral {
+    font-size: 18px;
+    color: #95999c;
+}
+
+
+
+.principal {
+    grid-area: principal;
+    grid-column: 2 / span 3;
+    grid-row: 2 /span 4;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+        "tituloInicio tituloInicio tituloInicio"
+        "conteudoDestaque conteudoDestaque pesquisar"
+        "tituloJogos tituloJogos tituloJogos"
+        "produtos produtos produtos"
+        "banner jogosGratis jogosGratis"
+        "maisJogos maisJogos maisJogos"    
+    ;
+    gap: 8px;
+    padding: 8px 16px;
+    height: calc(100vh - 64px);
+}
+
+.tituloInicio {
+    grid-area: tituloInicio;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    padding: 8px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.conteudoDestaque {
+    grid-area: conteudoDestaque;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+
+    width: 700px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.caixaDestaque {
+    display: flex;
+    position: relative;
+    width: 400%;
+    height: 100%;
+    animation: slide 20s infinite ease-out;
+}
+
+.slide {
+    width: 25%;
+    transition: .6s;
+}
+
+.slideFoto {
+    width: 100%;
+    height: 100%;
+}
+
+    @keyframes slide {
+        0% {left: 0%}
+       10% {left: 0%}
+       25% {left: -100%}
+       35% {left: -100%}
+       50% {left: -200%}
+       60% {left: -200%}
+       75% {left: -300%}
+       85% {left: -300%}
+      100% {left: 0%}
+    }
+
+.pesquisar {
+    grid-area: pesquisar;
+    grid-column: 3;
+    grid-row: 2;
+
+    padding: 16px;
+
+    border-radius: 10px;
+    background-color: #15191c;
+}
+
+.formulario {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.campoBusca {
+    padding: 5px;
+    height: 27px;
+    border: none;
+}
+
+.botaoPesquisa {
+    height: 27px;
+    cursor: pointer;
+    border: none;
+    border-left: solid 1px #95999c;
+    background-color: #ffffff;
+    transition: .4s;
+}
+
+.material-icons {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%; 
+    transition: .4s;
+}
+    .botaoPesquisa:hover {
+        background-color: #39325a;
+    }
+
+    .material-icons:hover {
+        color: #ffffff;
+    }
+
+.blocoCategoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    margin: 16px auto;
+}
+
+.titulistaJogos {
+    font-size: 25px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.genero {
+    display: flex;
+    flex-direction: column; 
+    gap: 19px;  
+    margin: 20px 0 0 20px;  
+}
+
+.itemJogo {
+    font-size: 22px;
+    color:#95999c;
+}
+.itemJogo:hover {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.tituloJogos {
+    grid-area: tituloJogos;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+
+    padding: 8px;
+    margin-top: 8px
+}
+
+.produtos {
+    grid-area: produtos;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    padding: 8px;
+}
+
+.produtoItem {
+    width: 250px;
+    height: 100%;
+}
+
+.caixaImg {
+    width: 100%;
+    height: 85%;
+}
+
+.artJogo {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px;
+    height: 15%;
+    background-color: #192942;
+}
+
+.preco {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.comprar {
+    height: 30px;
+    border: none;
+    background-color: #d51732;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+    grid-area: banner;
+    grid-column: 1;
+    grid-row: 5;
+
+    padding: 16px;
+    background-color: yellow;
+}
+
+.jogosGratis {
+    grid-area: jogosGratis;
+    grid-column: 2 / span 3;
+    grid-row: 5;
+
+    padding: 16px;
+    background-color: palevioletred;
+}
+
+.maisJogos {
+    grid-area: maisJogos;
+    grid-column: 1 / span 3;
+    grid-row: 6;
+
+    padding: 16px;
+    background-color: rgb(255, 0, 85);
+}
+
+
+
+/*.rodaPe {
+    grid-area: rodaPe;
+    grid-column: 1 / span 3;
+    grid-row: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: static;
+
+    padding: 16px;
+    background-color: #000511;
+}
+
+.copyright {
+    align-self: center;
+    font-size: 11px;
+}
+*/
